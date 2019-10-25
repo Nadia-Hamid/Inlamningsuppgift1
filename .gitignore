@@ -10,4 +10,4 @@ MANIFEST.MF
 *.iml
 *.jar
 bin
-*..swp
+*.swp
