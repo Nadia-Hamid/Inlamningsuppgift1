@@ -23,10 +23,10 @@ public class Guesser{
    */
 
   // Write the constructor below this line.
-public Guesser(int low, int high) {
+public Guesser(int lowScore, int highScore) {
 
-	10 = low;
-	30 = high;
+	 low = lowScore;
+	 high = highScore;
 }	
 
   /*
@@ -39,7 +39,7 @@ public Guesser(int low, int high) {
 	rules();
 	
     // call the doGuesses() method here
-	doGuess();
+	doGuesses();
 
   }
 
@@ -62,12 +62,22 @@ public Guesser(int low, int high) {
    * the player.
    */
   private String getReply(){
-    String reply = null;
+    
+    String reply;
     // Write code here which reads a String from the console.
     // As long as it is not a valid reply (one of "T" and "F")
     // write an error message, and read a new reply.
     // When you have gotten a valid reply, return it.
-    return reply;
+    Scanner scan = new Scanner (System.in);
+    reply = scan.nextLine().toLowerCase();
+    while (!reply.equals("null")){
+	if (reply =="T"){
+	  if (reply == "F"){
+	System.out.print(reply);
+	}}else {
+	System.out.println("Enter a valid reply");
+	}	
+	
   }
 
   private void doGuesses(){
