@@ -68,17 +68,13 @@ public Guesser(int lowScore, int highScore) {
     // As long as it is not a valid reply (one of "T" and "F")
     // write an error message, and read a new reply.
     // When you have gotten a valid reply, return it.
-    Scanner scan = new Scanner (System.in);
-    reply = scan.nextLine().toLowerCase();
-    while (!reply.equals("null")){
-	if (reply =="T"){
-	  if (reply == "F"){
-	System.out.print(reply);
-	}}else {
-	System.out.println("Enter a valid reply");
-	}	
-	
-  }
+	Scanner scan = new Scanner (System.in);
+	reply = scan.nextLine();
+	if(reply.equals("T") && reply.equals("f"))
+	return reply;
+	else
+	System.out.println("Write in T or F");
+  	
 
   private void doGuesses(){
     int i=0; // number of guesses
