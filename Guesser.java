@@ -1,5 +1,5 @@
 import java.io.Console;
-
+import java.util.Scanner;
 /**
  * Assignment 1 - Guessing Game
  * 
@@ -57,25 +57,25 @@ public Guesser(int lowScore, int highScore) {
    * call, which is not what this method is supposed to do.
    * 
    * Instead, change the method so that it reads a reply
+
    * from the player, and if it is "T" or "F", we have
    * a valid reply. Return the String that you read from
    * the player.
    */
   private String getReply(){
     
-    String reply;
+    String reply = "";
     // Write code here which reads a String from the console.
     // As long as it is not a valid reply (one of "T" and "F")
     // write an error message, and read a new reply.
     // When you have gotten a valid reply, return it.
 	Scanner scan = new Scanner (System.in);
-	while(true){
-	reply = scan.nextLine();
-	if(reply.equals("T") // reply.equals("F"))
-	return reply;
-	else
-	System.out.println("Write in T or F");
+	while(!reply.equals("T") && !reply.equals("F")) {
+	reply = scan.nextLine().toUpperCase();
+	System.out.println("Write in T or F ");
   	}
+	return reply; 
+}
 
   private void doGuesses(){
     int i=0; // number of guesses
