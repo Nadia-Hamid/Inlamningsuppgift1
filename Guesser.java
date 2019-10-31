@@ -69,12 +69,13 @@ public Guesser(int lowScore, int highScore) {
     // write an error message, and read a new reply.
     // When you have gotten a valid reply, return it.
 	Scanner scan = new Scanner (System.in);
+	while(true){
 	reply = scan.nextLine();
-	if(reply.equals("T") && reply.equals("f"))
+	if(reply.equals("T") // reply.equals("F"))
 	return reply;
 	else
 	System.out.println("Write in T or F");
-  	
+  	}
 
   private void doGuesses(){
     int i=0; // number of guesses
