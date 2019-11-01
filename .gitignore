@@ -1,6 +1,5 @@
 *~
 .classpath
-*.class
 .project
 target
 .settings
@@ -11,3 +10,4 @@ MANIFEST.MF
 *.jar
 bin
 *.swp
+*.class
